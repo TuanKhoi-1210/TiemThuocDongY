@@ -1,0 +1,6 @@
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Domain\bin\Debug\TiemThuocDongY.Domain.dll
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Domain\bin\Debug\TiemThuocDongY.Domain.pdb
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Domain\obj\Debug\TiemThuocDongY.Domain.csproj.AssemblyReference.cache
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Domain\obj\Debug\TiemThuocDongY.Domain.csproj.CoreCompileInputs.cache
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Domain\obj\Debug\TiemThuocDongY.Domain.dll
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Domain\obj\Debug\TiemThuocDongY.Domain.pdb

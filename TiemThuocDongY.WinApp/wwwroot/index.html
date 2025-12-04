@@ -1,0 +1,1575 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Quản lý tiệm thuốc Đông y</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <!-- Màn hình đăng nhập -->
+    <div class="login-screen" id="login-screen">
+        <div class="login-card">
+            <div class="login-logo">🌿</div>
+            <h1>Đăng nhập</h1>
+            <p class="login-sub">Quản lý tiệm thuốc Đông y</p>
+
+            <div class="field">
+                <label>Tên đăng nhập</label>
+                <input class="input" id="login-username" placeholder="demo" />
+            </div>
+            <div class="field">
+                <label>Mật khẩu</label>
+                <input class="input" id="login-password" type="password" placeholder="••••••" />
+            </div>
+
+            <div class="login-actions">
+                <button class="btn btn-primary" id="btn-login" type="button">Đăng nhập</button>
+                <button class="btn btn-link" id="btn-forgot-password" type="button">Quên mật khẩu?</button>
+            </div>
+
+            <p class="login-hint">
+                Hiện tại dùng tài khoản demo, chỉ cần bấm "Đăng nhập" để vào hệ thống.
+            </p>
+        </div>
+    </div>
+
+    <!-- App chính -->
+    <div class="app-shell app-shell-hidden" id="app-shell">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar__brand">
+                <div class="brand__logo">🌿</div>
+                <div class="brand__text">
+                    <div class="brand__title">Tiệm Thuốc Đông Y</div>
+                    <div class="brand__subtitle">Phần mềm quản lý</div>
+                </div>
+            </div>
+
+            <nav class="sidebar__nav">
+                <button class="nav-item active" data-page="dashboard" type="button">
+                    <span class="nav-icon">🏠</span>
+                    <span>Tổng quan</span>
+                </button>
+                <button class="nav-item" data-page="thuoc" type="button">
+                    <span class="nav-icon">💊</span>
+                    <span>Thuốc Đông y</span>
+                </button>
+                <button class="nav-item" data-page="khachhang" type="button">
+                    <span class="nav-icon">👤</span>
+                    <span>Khách hàng</span>
+                </button>
+                <button class="nav-item" data-page="donthuoc" type="button">
+                    <span class="nav-icon">📜</span>
+                    <span>Đơn thuốc</span>
+                </button>
+                <button class="nav-item" data-page="nhapkho" type="button">
+                    <span class="nav-icon">📦</span>
+                    <span>Nhập kho</span>
+                </button>
+                <button class="nav-item" data-page="baocao" type="button">
+                    <span class="nav-icon">📈</span>
+                    <span>Báo cáo</span>
+                </button>
+            </nav>
+
+            <div class="sidebar__footer">
+                <small>© 2025 - TiemThuocDongY</small>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <!-- Header -->
+            <header class="main__header">
+                <div class="header__title">
+                    <h1 id="page-title">Tổng quan</h1>
+                    <p>Quản lý hoạt động tiệm thuốc Đông y</p>
+                </div>
+                <div class="header__right">
+
+                    <!-- User menu -->
+                    <div class="user-menu">
+                        <button class="user-badge" id="user-menu-toggle" type="button">
+                            <!-- avatar: 2 ký tự đầu tên / username -->
+                            <span class="user-avatar" id="topbar-user-avatar">AD</span>
+
+                            <!-- khối text: họ tên + vai trò -->
+                            <span class="user-info">
+                                <span class="user-name" id="topbar-user-fullname">Chưa đăng nhập</span>
+                                <span class="user-role" id="topbar-user-role"></span>
+                            </span>
+                        </button>
+
+                        <div class="user-menu__dropdown" id="user-menu-dropdown">
+                            <button class="user-menu__item" data-page="taikhoan" type="button">
+                                Tài khoản
+                            </button>
+                            <button class="user-menu__item" data-action="logout" type="button">
+                                Đăng xuất
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <section class="main__content">
+                <!-- Dashboard -->
+                <section id="page-dashboard" class="page active">
+                    <div class="grid grid-3">
+                        <div class="card">
+                            <div class="card-title">Doanh thu hôm nay</div>
+                            <div class="card-value" id="dash-today-revenue">0 đ</div>
+                            <div class="card-sub" id="dash-today-orders">0 đơn thuốc</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Đơn thuốc còn nợ</div>
+                            <div class="card-value" id="dash-pending-orders">0</div>
+                            <div class="card-sub">Cần gọi nhắc khách</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Thuốc sắp hết</div>
+                            <div class="card-value" id="dash-lowstock-count">0</div>
+                            <div class="card-sub">Số mặt hàng dưới tồn tối thiểu</div>
+                        </div>
+                    </div>
+
+                    <div class="card card--mt">
+                        <div class="card-title">
+                            Hoạt động gần đây
+                            <button id="btn-dashboard-export" class="btn btn-secondary btn-sm" style="float:right;">
+                                Xuất báo cáo
+                            </button>
+                        </div>
+                        <table class="table table-compact">
+                            <thead>
+                                <tr>
+                                    <th>Thời gian</th>
+                                    <th>Loại</th>
+                                    <th>Mô tả</th>
+                                    <th>Người thực hiện</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dash-activity-body">
+                                <!-- sẽ fill động bằng JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- Thuốc Đông y -->
+                <section id="page-thuoc" class="page">
+                    <div class="page-header">
+                        <h2>Danh mục thuốc Đông y</h2>
+                        <div class="page-header__actions">
+                            <input type="text" class="input" id="thuoc-search" placeholder="Tìm theo tên thuốc..." />
+                            <button class="btn btn-primary" data-modal-target="modal-add-thuoc" type="button">
+                                + Thêm thuốc
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Mã</th>
+                                    <th>Tên thuốc</th>
+                                    <th>Đơn vị</th>
+                                    <th>Giá bán</th>
+                                    <th>Tồn kho</th>
+                                    <th>Tồn tối thiểu</th>
+                                    <th>Ghi chú</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Sẽ được App.onThuocList() đổ dữ liệu -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- Khách hàng -->
+                <section id="page-khachhang" class="page">
+                    <div class="page-header">
+                        <h2>Khách hàng</h2>
+                        <div class="page-header__actions">
+                            <input type="text" class="input" id="khach-search" placeholder="Tìm theo tên / SĐT..." />
+                            <button class="btn btn-primary" data-modal-target="modal-add-khach" type="button">
+                                + Thêm khách
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <table class="table" id="khach-table">
+                            <thead>
+                                <tr>
+                                    <th>Mã KH</th>
+                                    <th>Họ tên</th>
+                                    <th>Năm sinh</th>
+                                    <th>SĐT</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Ghi chú</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- sẽ đổ bằng JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- Đơn thuốc -->
+                <section id="page-donthuoc" class="page">
+                    <div class="page-header">
+                        <h2>Đơn thuốc</h2>
+                        <div class="page-header__actions">
+                            <button class="btn btn-primary" data-modal-target="modal-add-donthuoc" type="button">
+                                + Lập đơn thuốc mới
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="filters-row">
+                            <div class="field">
+                                <label>Từ ngày</label>
+                                <input type="date" class="input" id="dt-filter-from" />
+                            </div>
+                            <div class="field">
+                                <label>Đến ngày</label>
+                                <input type="date" class="input" id="dt-filter-to" />
+                            </div>
+                            <div class="field">
+                                <label>Khách hàng</label>
+                                <input type="text" class="input" id="dt-filter-khach" placeholder="Tên / Mã KH..." />
+                            </div>
+                            <div class="field">
+                                <label>Số đơn / ghi chú</label>
+                                <input type="text" class="input" id="dt-filter-keyword" placeholder="Tìm nhanh..." />
+                            </div>
+                        </div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Số đơn</th>
+                                    <th>Ngày lập</th>
+                                    <th>Khách hàng</th>
+                                    <th>Bác sĩ</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Hạn thanh toán</th>
+                                    <th>Trạng thái đơn</th>
+                                    <th>Thanh toán</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-don-thuoc-id="1">
+                                    <td>DT2025-0005</td>
+                                    <td>27/11/2025</td>
+                                    <td>KH005 - Lê Văn E</td>
+                                    <td>Thầy Hùng</td>
+                                    <td>700.000 đ</td>
+                                    <td>30/11/2025</td>
+                                    <td><span class="badge badge-success">Đã phát thuốc</span></td>
+                                    <td><span class="badge badge-warning">Trả một phần</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-donthuoc" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-edit-donthuoc" type="button">Sửa</button>
+                                        <button class="btn btn-sm btn-print-donthuoc" type="button">In</button>
+                                        <button class="btn btn-sm btn-primary btn-thu-tien" type="button">Thu tiền</button>
+                                    </td>
+                                </tr>
+                                <tr data-don-thuoc-id="2">
+                                    <td>DT2025-0004</td>
+                                    <td>27/11/2025</td>
+                                    <td>KH003 - Trần Thị C</td>
+                                    <td>Thầy Hùng</td>
+                                    <td>320.000 đ</td>
+                                    <td>05/12/2025</td>
+                                    <td><span class="badge badge-warning">Chưa lấy thuốc</span></td>
+                                    <td><span class="badge badge-outline">Chưa thanh toán</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-donthuoc" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-edit-donthuoc" type="button">Sửa</button>
+                                        <button class="btn btn-sm btn-print-donthuoc" type="button">In</button>
+                                        <button class="btn btn-sm btn-primary btn-thu-tien" type="button">Thu tiền</button>
+                                    </td>
+                                </tr>
+                                <tr data-don-thuoc-id="3">
+                                    <td>DT2025-0003</td>
+                                    <td>26/11/2025</td>
+                                    <td>KH002 - Nguyễn Văn B</td>
+                                    <td>Thầy Minh</td>
+                                    <td>280.000 đ</td>
+                                    <td>29/11/2025</td>
+                                    <td><span class="badge badge-success">Đã phát thuốc</span></td>
+                                    <td><span class="badge badge-success">Đã thanh toán</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-donthuoc" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-edit-donthuoc" type="button">Sửa</button>
+                                        <button class="btn btn-sm btn-print-donthuoc" type="button">In</button>
+                                        <button class="btn btn-sm btn-primary btn-thu-tien" type="button">Thu tiền</button>
+                                    </td>
+                                </tr>
+                                <tr data-don-thuoc-id="4">
+                                    <td>DT2025-0002</td>
+                                    <td>25/11/2025</td>
+                                    <td>KH001 - Nguyễn Văn A</td>
+                                    <td>Thầy Minh</td>
+                                    <td>210.000 đ</td>
+                                    <td>28/11/2025</td>
+                                    <td><span class="badge badge-success">Đã phát thuốc</span></td>
+                                    <td><span class="badge badge-success">Đã thanh toán</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-donthuoc" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-edit-donthuoc" type="button">Sửa</button>
+                                        <button class="btn btn-sm btn-print-donthuoc" type="button">In</button>
+                                        <button class="btn btn-sm btn-primary btn-thu-tien" type="button">Thu tiền</button>
+                                    </td>
+                                </tr>
+                                <tr data-don-thuoc-id="5">
+                                    <td>DT2025-0001</td>
+                                    <td>24/11/2025</td>
+                                    <td>KH004 - Phạm Thị D</td>
+                                    <td>Thầy Hùng</td>
+                                    <td>190.000 đ</td>
+                                    <td>27/11/2025</td>
+                                    <td><span class="badge badge-outline">Đã hủy</span></td>
+                                    <td><span class="badge badge-outline">Không thu</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-donthuoc" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-print-donthuoc" type="button">In</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+
+                        </table>
+
+                        <div class="table-footer">
+                            <span>Hiển thị 1–5 / 5 đơn (dữ liệu demo)</span>
+                            <div class="table-footer__actions">
+                                <button class="btn btn-sm" type="button">&lsaquo;</button>
+                                <button class="btn btn-sm" type="button">&rsaquo;</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nhập kho -->
+                <section id="page-nhapkho" class="page">
+                    <div class="page-header">
+                        <h2>Phiếu nhập kho</h2>
+                        <div class="page-header__actions">
+                            <button class="btn btn-primary" data-modal-target="modal-add-nhapkho" type="button">
+                                + Tạo phiếu nhập
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="filters-row">
+                            <div class="field">
+                                <label>Từ ngày</label>
+                                <input type="date" class="input" id="pn-filter-from" />
+                            </div>
+                            <div class="field">
+                                <label>Đến ngày</label>
+                                <input type="date" class="input" id="pn-filter-to" />
+                            </div>
+                            <div class="field">
+                                <label>Nhà cung cấp</label>
+                                <input class="input"
+                                       id="pn-filter-ncc-name"
+                                       list="pn-filter-ncc-suggestions"
+                                       placeholder="Gõ tên hoặc chọn NCC..." />
+                                <datalist id="pn-filter-ncc-suggestions"></datalist>
+                                <input type="hidden" id="pn-filter-ncc-id" value="0" />
+                            </div>
+                            <div class="field">
+                                <label>Số phiếu</label>
+                                <input type="text" class="input" id="pn-filter-sophieu" placeholder="Tìm theo số phiếu..." />
+                            </div>
+                        </div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Số phiếu</th>
+                                    <th>Ngày nhập</th>
+                                    <th>Nhà cung cấp</th>
+                                    <th>Số mặt hàng</th>
+                                    <th>Tổng số lượng</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Hạn thanh toán</th>
+                                    <th>Thanh toán</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PN2025-0010</td>
+                                    <td>27/11/2025</td>
+                                    <td>Cơ sở Dược liệu An Nhiên</td>
+                                    <td>5</td>
+                                    <td>7.500 gram</td>
+                                    <td>195.000.000 đ</td>
+                                    <td>10/12/2025</td>
+                                    <td><span class="badge badge-warning">Còn nợ 45.000.000</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-nhapkho" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-print-nhapkho" type="button">In</button>
+                                        <button class="btn btn-sm btn-primary btn-thanh-toan-ncc" type="button">
+                                            Thanh toán NCC
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PN2025-0009</td>
+                                    <td>26/11/2025</td>
+                                    <td>Nhà thuốc Đông y Gia Truyền</td>
+                                    <td>3</td>
+                                    <td>3.200 gram</td>
+                                    <td>58.000.000 đ</td>
+                                    <td>05/12/2025</td>
+                                    <td><span class="badge badge-success">Đã thanh toán</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-nhapkho" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-print-nhapkho" type="button">In</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PN2025-0008</td>
+                                    <td>25/11/2025</td>
+                                    <td>Công ty Dược liệu Xanh</td>
+                                    <td>4</td>
+                                    <td>4.100 gram</td>
+                                    <td>73.500.000 đ</td>
+                                    <td>05/12/2025</td>
+                                    <td><span class="badge badge-outline">Chưa thanh toán</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-nhapkho" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-print-nhapkho" type="button">In</button>
+                                        <button class="btn btn-sm btn-primary btn-thanh-toan-ncc" type="button">
+                                            Thanh toán NCC
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PN2025-0007</td>
+                                    <td>23/11/2025</td>
+                                    <td>Cơ sở Dược liệu An Nhiên</td>
+                                    <td>2</td>
+                                    <td>1.500 gram</td>
+                                    <td>25.000.000 đ</td>
+                                    <td>30/11/2025</td>
+                                    <td><span class="badge badge-success">Đã thanh toán</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-view-nhapkho" type="button">Xem</button>
+                                        <button class="btn btn-sm btn-print-nhapkho" type="button">In</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                        <div class="table-footer">
+                            <span>Hiển thị 1–4 / 4 phiếu (dữ liệu demo)</span>
+                            <div class="table-footer__actions">
+                                <button class="btn btn-sm" type="button">&lsaquo;</button>
+                                <button class="btn btn-sm" type="button">&rsaquo;</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="page-baocao" class="page">
+                    <div class="page-header">
+                        <h2>Báo cáo</h2>
+
+                        <div class="page-header-actions">
+                            <label for="bc-month">Chọn tháng:</label>
+                            <input type="month" id="bc-month" class="input" />
+                            <button id="bc-btn-refresh" class="btn btn-secondary btn-sm">Xem báo cáo</button>
+                        </div>
+                    </div>
+
+                    <!-- KHU VỰC 1: Tổng quan doanh thu / nhập kho -->
+                    <div class="grid grid-3">
+                        <div class="card">
+                            <div class="card-title">Doanh thu hôm nay</div>
+                            <div class="card-value" id="bc-today-revenue">0 đ</div>
+                            <div class="card-sub" id="bc-today-orders">0 đơn thuốc</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Doanh thu tháng</div>
+                            <div class="card-value" id="bc-month-revenue">0 đ</div>
+                            <div class="card-sub" id="bc-month-revenue-change">So với tháng trước: 0%</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Giá trị nhập kho tháng</div>
+                            <div class="card-value" id="bc-month-import">0 đ</div>
+                            <div class="card-sub" id="bc-month-import-count">0 phiếu nhập</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2">
+                        <div class="card">
+                            <div class="card-title">Doanh thu 7 ngày gần nhất</div>
+                            <table class="table table-compact">
+                                <thead>
+                                    <tr>
+                                        <th>Ngày</th>
+                                        <th>Số đơn</th>
+                                        <th>Doanh thu</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bc-7days-body">
+                                    <!-- fill bằng JS -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-title">Thuốc bán chạy trong tháng</div>
+                            <table class="table table-compact">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Thuốc</th>
+                                        <th>Đơn vị</th>
+                                        <th>Số lượng bán</th>
+                                        <th>Doanh thu</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bc-topthuoc-body">
+                                    <!-- fill bằng JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- KHU VỰC 2: TỔNG HỢP CÔNG NỢ -->
+                    <div class="page-header" style="margin-top:18px;">
+                        <h2>Tổng hợp công nợ</h2>
+
+                        <div class="page-header-actions">
+                            <button id="bc-btn-export-stock" class="btn btn-outline btn-sm">Xuất báo cáo kho</button>
+                            <button id="bc-btn-export-debt" class="btn btn-outline btn-sm">Xuất báo cáo công nợ</button>
+                            <button id="bc-btn-export-summary" class="btn btn-primary btn-sm">Xuất báo cáo tổng hợp</button>
+                        </div>
+                    </div>
+
+                    <!-- 2.1. Card tổng quan công nợ -->
+                    <div class="grid grid-3">
+                        <div class="card">
+                            <div class="card-title">Tổng phải thu khách hàng</div>
+                            <div class="card-value" id="bc-total-ar">0 đ</div>
+                            <div class="card-sub" id="bc-total-ar-count">0 khách hàng còn nợ</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Tổng phải trả nhà cung cấp</div>
+                            <div class="card-value" id="bc-total-ap">0 đ</div>
+                            <div class="card-sub" id="bc-total-ap-count">0 nhà cung cấp</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Chênh lệch (phải thu – phải trả)</div>
+                            <div class="card-value" id="bc-total-balance">0 đ</div>
+                            <div class="card-sub" id="bc-total-balance-note"></div>
+                        </div>
+                    </div>
+
+                    <!-- 2.2. Bảng chi tiết công nợ -->
+                    <div class="grid grid-2">
+                        <!-- Công nợ khách hàng -->
+                        <div class="card">
+                            <div class="card-title">Công nợ khách hàng</div>
+                            <table class="table table-compact">
+                                <thead>
+                                    <tr>
+                                        <th>Mã KH</th>
+                                        <th>Khách hàng</th>
+                                        <th>Số đơn còn nợ</th>
+                                        <th>Còn nợ</th>
+                                        <th>Hạn TT gần nhất</th>
+                                        <th>Tình trạng</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bc-congno-kh-body">
+                                    <!-- fill bằng JS -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Công nợ nhà cung cấp -->
+                        <div class="card">
+                            <div class="card-title">Công nợ nhà cung cấp</div>
+                            <table class="table table-compact">
+                                <thead>
+                                    <tr>
+                                        <th>Nhà cung cấp</th>
+                                        <th>Số phiếu còn nợ</th>
+                                        <th>Còn nợ</th>
+                                        <th>Hạn TT gần nhất</th>
+                                        <th>Tình trạng</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bc-congno-ncc-body">
+                                    <!-- fill bằng JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- Tài khoản -->
+                <section class="page page-account" id="page-taikhoan">
+                    <div class="page-header">
+                        <div>
+                            <h2>Tài khoản</h2>
+                            <p>Quản lý hoạt động tiệm thuốc Đông y</p>
+                        </div>
+                        <span class="page-header__hint">
+                            Quản lý thông tin người dùng đang đăng nhập và các tài khoản trong hệ thống.
+                        </span>
+                    </div>
+
+                    <div class="account-container">
+                        <!-- Cột trái: card profile -->
+                        <div class="card account-card account-card--profile">
+                            <div class="account-avatar" id="acc-profile-avatar">
+                                <span>AD</span>
+                            </div>
+                            <div class="account-profile-text">
+                                <h3 id="acc-profile-name">Chủ tiệm Đông y</h3>
+                                <p class="account-profile-role" id="acc-profile-role">Admin</p>
+                                <p class="account-profile-email" id="acc-profile-email">admin@tiemthuoc.local</p>
+                            </div>
+                            <p class="account-profile-note">
+                                Đây là tài khoản bạn đang đăng nhập. Các chức năng phân quyền sẽ dựa trên vai trò này.
+                            </p>
+                        </div>
+
+                        <!-- Cột phải: form chi tiết tài khoản -->
+                        <div class="card account-card account-card--detail">
+                            <h3 class="card-title">Thông tin tài khoản</h3>
+
+                            <div class="account-grid">
+                                <div class="form-group">
+                                    <label for="acc-username">Tên đăng nhập</label>
+                                    <input id="acc-username" class="input" type="text" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="acc-fullname">Họ tên</label>
+                                    <input id="acc-fullname" class="input" type="text" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="acc-email">Email</label>
+                                    <input id="acc-email" class="input" type="text" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="acc-phone">Số điện thoại</label>
+                                    <input id="acc-phone" class="input" type="text" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="acc-role">Vai trò</label>
+                                    <select id="acc-role" class="input">
+                                        <option value="5">Admin</option>
+                                        <option value="6">Thu ngân</option>
+                                        <option value="7">Bán thuốc</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="acc-new-password1">Mật khẩu mới (qua email)</label>
+                                    <input id="acc-new-password1" class="input" type="password" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="acc-new-password2">Nhập lại mật khẩu mới</label>
+                                    <input id="acc-new-password2" class="input" type="password" />
+                                </div>
+
+                                <div class="form-group form-group--full">
+                                    <label for="acc-reset-code">Mã xác nhận gửi về email</label>
+                                    <div class="account-password-row">
+                                        <input id="acc-reset-code" class="input" type="text" />
+                                        <button class="btn btn-sm btn-outline" id="btn-account-send-code" type="button">
+                                            Gửi mã
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                                <!-- Mật khẩu: chỉ dùng cho tài khoản khác hoặc khi tạo mới -->
+                                <div class="form-group form-group--full">
+                                    <label for="acc-password">
+                                        Mật khẩu
+                                        <span class="text-muted">(chỉ cho tài khoản khác hoặc tài khoản mới)</span>
+                                    </label>
+                                    <input id="acc-password" class="input" type="password"
+                                           placeholder="Để trống nếu không đổi" disabled>
+                                </div>
+
+                                <div class="form-group form-group--full">
+                                    <label for="acc-password-confirm">Nhập lại mật khẩu</label>
+                                    <input id="acc-password-confirm" class="input" type="password" disabled>
+                                </div>
+                            </div>
+
+                            <div class="account-security">
+                                <h4>Quản lý tài khoản & bảo mật</h4>
+                                <p id="account-security-hint">
+                                    Chức năng đổi mật khẩu, gửi mã qua email sẽ được bổ sung sau.
+                                </p>
+
+                                <div class="account-security__buttons">
+                                    <button class="btn btn-primary" id="btn-account-save" disabled>Lưu thay đổi</button>
+                                    <button class="btn btn-outline" id="btn-account-disable" disabled>Vô hiệu hóa</button>
+                                    <button class="btn btn-outline" id="btn-account-reset-password" type="button">
+                                        Đổi mật khẩu (qua email)
+                                    </button>
+                                    <button class="btn btn-outline" id="btn-account-activate" disabled> mở khóa</button>
+                                    <button class="btn btn-danger" id="btn-account-delete" disabled>Xóa tài khoản</button>
+                                </div>
+
+                                <hr class="account-security__divider" />
+
+                                <button class="btn btn-outline" id="btn-logout">Đăng xuất khỏi hệ thống</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card quản lý user (chỉ hiện nếu Admin) -->
+                    <div class="card account-card account-card--userlist" id="account-userlist-card">
+                        <div class="account-userlist-header">
+                            <div>
+                                <h3 class="card-title">Quản lý tài khoản</h3>
+                                <p class="card-sub">Chỉ tài khoản Admin mới sử dụng được khu vực này.</p>
+                            </div>
+                            <div class="account-userlist-actions">
+                                <input type="text" class="input input-sm" id="account-user-search"
+                                       placeholder="Tìm theo tên đăng nhập / họ tên..." />
+                                <select class="input input-sm" id="account-user-filter">
+                                    <option value="all">Tất cả</option>
+                                    <option value="active">Đang hoạt động</option>
+                                    <option value="inactive">Đã khóa</option>
+                                </select>
+
+                                <!-- NÚT THÊM TÀI KHOẢN -->
+                                <button class="btn btn-sm btn-primary" id="btn-account-add" type="button">
+                                    Thêm tài khoản
+                                </button>
+                            </div>
+                        </div>
+
+                        <table class="table table-compact" id="account-user-table">
+                            <thead>
+                                <tr>
+                                    <th>Tên đăng nhập</th>
+                                    <th>Họ tên</th>
+                                    <th>Vai trò</th>
+                                    <th>Email</th>
+                                    <th>Trạng thái</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JS fill -->
+                            </tbody>
+                        </table>
+
+                        <div class="table-footer">
+                            <div>Nhấn vào một dòng để xem / sửa chi tiết ở khung thông tin tài khoản bên trên.</div>
+                            <div class="table-footer__actions">
+                                <span class="badge badge-outline" id="account-user-count">0 tài khoản</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+            </section>
+        </main>
+    </div>
+
+    <!-- ========== MODALS ========== -->
+    <!-- Modal: Thêm / Sửa thuốc -->
+    <div class="modal" id="modal-add-thuoc">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3 id="modal-thuoc-title">Thêm thuốc Đông y</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+
+            <div class="modal__body">
+                <!-- hidden để biết đang sửa thuốc nào -->
+                <input type="hidden" id="thuoc-id" />
+
+                <div class="form-grid form-grid-2">
+                    <div class="field">
+                        <label for="thuoc-ma">Mã thuốc</label>
+                        <input id="thuoc-ma"
+                               class="input"
+                               placeholder="Tự sinh (Txxx)"
+                               disabled />
+                    </div>
+                    <div class="field">
+                        <label for="thuoc-ten">Tên thuốc</label>
+                        <input id="thuoc-ten" class="input" placeholder="VD: Hoàng kỳ" />
+                    </div>
+                    <div class="field">
+                        <label for="thuoc-tenkhac">Tên khác (nếu có)</label>
+                        <input id="thuoc-tenkhac" class="input" />
+                    </div>
+                    <div class="field">
+                        <label for="thuoc-donvi">Đơn vị tính</label>
+                        <select id="thuoc-donvi" class="input">
+                            <option>gram</option>
+                            <option>thang</option>
+                            <option>gói</option>
+                            <option>viên</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="thuoc-giaban">Giá bán lẻ (đ/thg)</label>
+                        <input id="thuoc-giaban" class="input" placeholder="VD: 50000" />
+                    </div>
+                    <div class="field">
+                        <label for="thuoc-ton">Tồn tối thiểu</label>
+                        <input id="thuoc-ton" class="input" placeholder="VD: 5" />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="thuoc-congdung">Công dụng</label>
+                    <textarea id="thuoc-congdung" class="input input-textarea" rows="2"></textarea>
+                </div>
+                <div class="field">
+                    <label for="thuoc-chongchidinh">Chống chỉ định</label>
+                    <textarea id="thuoc-chongchidinh" class="input input-textarea" rows="2"></textarea>
+                </div>
+                <div class="field">
+                    <label for="thuoc-ghichu">Ghi chú</label>
+                    <textarea id="thuoc-ghichu" class="input input-textarea" rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-thuoc-save" type="button">Lưu thuốc</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal: Thêm / Sửa NCC -->
+    <div class="modal" id="modal-add-ncc">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3 id="modal-ncc-title">Thêm nhà cung cấp</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <input type="hidden" id="ncc-id" />
+
+                <div class="field">
+                    <label>Mã NCC</label>
+                    <input class="input" id="ncc-ma" />
+                </div>
+                <div class="field">
+                    <label>Tên NCC</label>
+                    <input class="input" id="ncc-ten" />
+                </div>
+                <div class="field">
+                    <label>Người liên hệ</label>
+                    <input class="input" id="ncc-lienhe" />
+                </div>
+                <div class="field">
+                    <label>Điện thoại</label>
+                    <input class="input" id="ncc-dienthoai" />
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input class="input" id="ncc-email" />
+                </div>
+                <div class="field">
+                    <label>Địa chỉ</label>
+                    <input class="input" id="ncc-diachi" />
+                </div>
+                <div class="field">
+                    <label>Ghi chú</label>
+                    <textarea class="input input-textarea" id="ncc-ghichu" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-ncc-save" type="button">
+                    Lưu nhà cung cấp
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Thêm / Sửa khách -->
+    <div class="modal" id="modal-add-khach">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3 id="modal-khach-title">Thêm khách hàng</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <!-- để phân biệt Thêm / Sửa -->
+                <input type="hidden" id="khach-id" />
+
+                <div class="form-grid form-grid-2">
+                    <div class="field">
+                        <label>Mã khách hàng</label>
+                        <input id="khach-ma"
+                               class="input"
+                               placeholder="Tự sinh (KHxxx)"
+                               disabled />
+                    </div>
+                    <div class="field">
+                        <label>Họ tên</label>
+                        <input id="khach-ten" class="input" placeholder="Nguyễn Văn A" />
+                    </div>
+                    <div class="field">
+                        <label>Năm sinh</label>
+                        <input id="khach-namsinh" class="input" placeholder="1985" />
+                    </div>
+                    <div class="field">
+                        <label>Điện thoại</label>
+                        <input id="khach-dienthoai" class="input" placeholder="SĐT..." />
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <input id="khach-email" class="input" placeholder="email@..." />
+                    </div>
+                    <div class="field">
+                        <label>Giới tính</label>
+                        <select id="khach-gioitinh" class="input">
+                            <option value="">--Không chọn--</option>
+                            <option value="1">Nam</option>
+                            <option value="2">Nữ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Địa chỉ</label>
+                    <textarea id="khach-diachi" class="input input-textarea" rows="2"></textarea>
+                </div>
+                <div class="field">
+                    <label>Ghi chú</label>
+                    <textarea id="khach-ghichu" class="input input-textarea" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-khach-save" type="button">Lưu khách</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal: Lập / Sửa đơn thuốc -->
+    <!-- Modal: Lập / Sửa đơn thuốc -->
+    <div class="modal" id="modal-add-donthuoc">
+        <div class="modal__dialog modal__dialog-lg">
+            <div class="modal__header">
+                <h3 id="modal-donthuoc-title">Lập đơn thuốc mới</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <!-- ẩn để phân biệt Thêm / Sửa -->
+                <input type="hidden" id="dt-id" />
+
+                <div class="form-grid form-grid-2">
+                    <div class="field">
+                        <label>Khách hàng</label>
+                        <!-- sau này sẽ load danh sách KH động: value = KhachHangId -->
+                        <select id="dt-khachhang" class="input">
+                            <option value="">-- Chọn khách hàng --</option>
+                            <!-- <option value="1">KH001 - Nguyễn Văn A</option> -->
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Ngày lập</label>
+                        <input id="dt-ngaylap" class="input" type="date" />
+                    </div>
+                    <div class="field">
+                        <label>Bác sĩ kê đơn</label>
+                        <select id="dt-bacsi" class="input">
+                            <option value="">-- Chọn thầy thuốc --</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Số đơn (auto)</label>
+                        <!-- chỉ hiển thị, C# sẽ tự sinh -->
+                        <input id="dt-sodon" class="input" placeholder="Sẽ tự sinh" disabled />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Chẩn đoán / ghi chú</label>
+                    <textarea id="dt-chandoan" class="input input-textarea" rows="2"></textarea>
+                </div>
+
+                <div class="field">
+                    <label>Chi tiết vị thuốc</label>
+                    <table class="table table-compact" id="table-donthuoc-details">
+                        <thead>
+                            <tr>
+                                <th>Thuốc</th>
+                                <th>Liều (gram)</th>
+                                <th>Số thang</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- dòng mẫu, JS sẽ clone -->
+                            <tr>
+                                <td>
+                                    <!-- value sau này = ThuocId -->
+                                    <select class="input dt-thuoc">
+                                        <option value="">-- Chọn thuốc --</option>
+                                        <!-- <option value="1">Hoàng kỳ</option> -->
+                                    </select>
+                                </td>
+                                <td><input class="input dt-lieu" value="10" /></td>
+                                <td><input class="input dt-sothang" value="5" /></td>
+                                <td><input class="input dt-dongia" value="50000" /></td>
+                                <td class="dt-thanhtien">250.000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger btn-row-remove" type="button">X</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-sm" id="btn-add-donthuoc-row"
+                            type="button" style="margin-top:6px;">
+                        + Thêm dòng
+                    </button>
+                </div>
+
+                <div class="field field-right">
+                    <div>
+                        Tổng tiền hàng:
+                        <strong id="dt-tongtienhang">0 đ</strong>
+                    </div>
+                    <div>
+                        Giảm giá:
+                        <input id="dt-giamgia" class="input"
+                               value="0" style="width:100px;display:inline-block;" /> đ
+                    </div>
+                    <div>
+                        Khách phải trả:
+                        <strong id="dt-phaitra">0 đ</strong>
+                    </div>
+                    <div>
+                        Đã thanh toán:
+                        <strong id="dt-da-thanh-toan" class="label-da-thanh-toan">0 đ</strong>
+                    </div>
+                    <div>
+                        Còn nợ:
+                        <strong id="dt-con-no" class="label-con-no">0 đ</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <!-- Đổi label & thêm id để JS bắt sự kiện -->
+                <button class="btn btn-primary" id="btn-donthuoc-save" type="button">
+                    Lưu đơn thuốc
+                </button>
+                <button class="btn btn-sm btn-primary btn-thu-tien" id="btn-donthuoc-thutien" type="button">
+                    Thu tiền
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal: Tạo phiếu nhập -->
+    <div class="modal" id="modal-add-nhapkho">
+        <div class="modal__dialog modal__dialog-lg">
+            <div class="modal__header">
+                <h3>Tạo phiếu nhập kho</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="form-grid form-grid-2">
+                    <div class="field">
+                        <label>Số phiếu</label>
+                        <input class="input" id="pn-sophieu" placeholder="Sẽ tự sinh / tự nhập" />
+                    </div>
+                    <div class="field">
+                        <label>Ngày nhập</label>
+                        <input class="input" id="pn-ngaynhap" type="date" />
+                    </div>
+
+                    <!-- NCC: input + datalist + hidden id -->
+                    <div class="field">
+                        <label>Nhà cung cấp</label>
+                        <input class="input"
+                               id="pn-ncc-name"
+                               list="pn-ncc-suggestions"
+                               placeholder="Gõ tên hoặc chọn NCC..." />
+                        <datalist id="pn-ncc-suggestions"></datalist>
+                        <input type="hidden" id="pn-ncc-id" value="0" />
+                    </div>
+
+                    <div class="field">
+                        <label>Ghi chú</label>
+                        <input class="input" id="pn-ghichu" />
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <label>Chi tiết thuốc nhập</label>
+                    <table class="table table-compact" id="table-nhapkho-details">
+                        <thead>
+                            <tr>
+                                <th>Thuốc</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá nhập</th>
+                                <th>Thành tiền</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-sm btn-add-row"
+                            id="btn-nhapkho-add-row"
+                            type="button"
+                            style="margin-top:6px;">
+                        + Thêm dòng
+                    </button>
+                </div>
+
+                <div class="field field-right">
+                    <div>Tổng tiền: <strong id="pn-tongtien-text">0 đ</strong></div>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-nhapkho-save" type="button">
+                    Lưu phiếu nhập
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Xác nhận xóa -->
+    <div class="modal" id="modal-confirm-delete">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3>Xác nhận xóa</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <p id="confirm-delete-message">
+                    Bạn có chắc chắn muốn xóa bản ghi này?
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-danger" id="btn-confirm-delete" type="button">Xóa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Xem / In đơn thuốc -->
+    <!-- Modal: Xem / In đơn thuốc -->
+    <div class="modal" id="modal-view-donthuoc">
+        <div class="modal__dialog modal__dialog-lg modal-prescription">
+            <div class="modal__header">
+                <h3>Chi tiết đơn thuốc</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <!-- Header -->
+                <div class="detail-header">
+                    <div class="detail-title">Tiệm thuốc Đông y An Thái</div>
+                    <div class="detail-sub">
+                        Phiếu đơn thuốc – Mã: <span id="view-dt-sodon">---</span>
+                    </div>
+                </div>
+
+                <!-- Thông tin chung -->
+                <div class="detail-grid">
+                    <div>
+                        <div class="detail-label">Khách hàng</div>
+                        <div class="detail-value" id="view-dt-khach">---</div>
+
+                        <div class="detail-label">Năm sinh</div>
+                        <div class="detail-value" id="view-dt-namsinh">---</div>
+
+                        <div class="detail-label">Địa chỉ</div>
+                        <div class="detail-value" id="view-dt-diachi">---</div>
+                    </div>
+                    <div>
+                        <div class="detail-label">Ngày lập</div>
+                        <div class="detail-value" id="view-dt-ngaylap">---</div>
+
+                        <div class="detail-label">Bác sĩ kê đơn</div>
+                        <div class="detail-value" id="view-dt-bacsi">---</div>
+
+                        <div class="detail-label">Hạn thanh toán</div>
+                        <div class="detail-value" id="view-dt-hanthanhtoan">---</div>
+
+                        <div class="detail-label">Trạng thái đơn</div>
+                        <div class="detail-value">
+                            <span class="badge badge-outline" id="view-dt-trangthaidon-badge">---</span>
+                        </div>
+
+                        <div class="detail-label">Thanh toán</div>
+                        <div class="detail-value">
+                            <span class="badge badge-outline" id="view-dt-trangthaithanhtoan-badge">---</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chẩn đoán / ghi chú -->
+                <div class="detail-block">
+                    <div class="detail-label">Chẩn đoán / ghi chú</div>
+                    <div class="detail-value" id="view-dt-chandoan">
+                        ---
+                    </div>
+                </div>
+
+                <!-- Chi tiết vị thuốc -->
+                <div class="detail-block">
+                    <div class="detail-label">Chi tiết vị thuốc</div>
+                    <table class="table table-compact">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Thuốc</th>
+                                <th>Liều (gram)</th>
+                                <th>Số thang</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody id="view-dt-ct-body">
+                            <!-- JS sẽ đổ chi tiết đơn thuốc ở đây -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Tổng hợp tiền -->
+                <div class="detail-summary">
+                    <div>Tổng tiền thuốc: <strong id="view-dt-tongtien">0 đ</strong></div>
+                    <div>Giảm giá: <strong id="view-dt-giamgia">0 đ</strong></div>
+                    <div>Thành tiền: <strong id="view-dt-phaitra">0 đ</strong></div>
+                    <div>Đã thanh toán: <strong id="view-dt-dathanhtoan">0 đ</strong></div>
+                    <div>Còn nợ: <strong id="view-dt-conno">0 đ</strong></div>
+                </div>
+
+                <div class="detail-footer">
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Đóng</button>
+                <button class="btn btn-primary" id="btn-print-donthuoc-preview" type="button">
+                    In đơn thuốc
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal: Xem / In phiếu nhập -->
+    <div class="modal" id="modal-view-nhapkho">
+        <div class="modal__dialog modal__dialog-lg modal-receipt">
+            <div class="modal__header">
+                <h3>Chi tiết phiếu nhập kho</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="detail-header">
+                    <div class="detail-title">Tiệm thuốc Đông y An Thái</div>
+                    <div class="detail-sub">Phiếu nhập kho – Mã: PN2025-0010 (demo)</div>
+                </div>
+
+                <div class="detail-grid">
+                    <div>
+                        <div class="detail-label">Nhà cung cấp</div>
+                        <div class="detail-value">Cơ sở Dược liệu An Nhiên</div>
+
+                        <div class="detail-label">Người liên hệ</div>
+                        <div class="detail-value">Ngô Văn Dược</div>
+                    </div>
+                    <div>
+                        <div class="detail-label">Ngày nhập</div>
+                        <div class="detail-value">27/11/2025</div>
+
+                        <div class="detail-label">Ghi chú</div>
+                        <div class="detail-value">Nhập đợt đầu tháng 11 (demo)</div>
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <div class="detail-label">Chi tiết thuốc nhập</div>
+                    <table class="table table-compact">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Thuốc</th>
+                                <th>Đơn vị</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá nhập</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Hoàng kỳ</td><td>gram</td><td>3.000</td><td>30.000</td><td>90.000.000</td></tr>
+                            <tr><td>2</td><td>Cam thảo</td><td>gram</td><td>2.000</td><td>25.000</td><td>50.000.000</td></tr>
+                            <tr><td>3</td><td>Đương quy</td><td>gram</td><td>2.500</td><td>22.000</td><td>55.000.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="detail-summary">
+                    <div>Tổng giá trị nhập: <strong>195.000.000 đ</strong></div>
+                    <div>Đã thanh toán : <strong class="label-da-thanh-toan-ncc">150.000.000 đ</strong></div>
+                    <div>Còn nợ NCC : <strong class="label-con-no-ncc">45.000.000 đ</strong></div>
+                </div>
+
+                <div class="detail-footer">
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Đóng</button>
+                <button class="btn btn-primary" id="btn-print-nhapkho-preview" type="button">
+                    In phiếu nhập 
+                </button>
+                <button class="btn btn-sm btn-primary btn-thanh-toan-ncc" type="button">
+                    Thanh toán NCC 
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Phiếu thu (thu tiền khách) -->
+    <div class="modal" id="modal-phieuthu">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3>Phiếu thu tiền khách</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+
+                <!-- Ẩn: Id đơn để gửi về C# -->
+                <input type="hidden" id="phieuthu-donthuoc-id" />
+
+                <div class="field">
+                    <label>Khách hàng</label>
+                    <input class="input" id="phieuthu-khach" disabled />
+                </div>
+                <div class="field">
+                    <label>Đơn thuốc</label>
+                    <input class="input" id="phieuthu-sodon" disabled />
+                </div>
+                <div class="field">
+                    <label>Số tiền phải thu</label>
+                    <input class="input" id="phieuthu-phaitra" disabled />
+                </div>
+                <div class="field">
+                    <label>Số tiền đã thu (trước đó)</label>
+                    <input class="input" id="phieuthu-dathu" disabled />
+                </div>
+                <div class="field">
+                    <label>Số tiền thu thêm lần này</label>
+                    <input class="input" id="phieuthu-sotien" />
+                </div>
+                <div class="field">
+                    <label>Hình thức</label>
+                    <select class="input" id="phieuthu-hinhthuc">
+                        <option value="0">Tiền mặt</option>
+                        <option value="1">Chuyển khoản</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Ghi chú</label>
+                    <textarea class="input input-textarea" id="phieuthu-ghichu" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-phieuthu-save" type="button">
+                    Lưu phiếu thu
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal: Phiếu chi (trả NCC) -->
+    <div class="modal" id="modal-phieuchi">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3>Phiếu chi trả NCC</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="field">
+                    <label>Nhà cung cấp</label>
+                    <input class="input" value="Cơ sở Dược liệu An Nhiên" disabled />
+                </div>
+                <div class="field">
+                    <label>Phiếu nhập</label>
+                    <input class="input" value="PN2025-0010" disabled />
+                </div>
+                <div class="field">
+                    <label>Số tiền phải trả</label>
+                    <input class="input" value="195.000.000" disabled />
+                </div>
+                <div class="field">
+                    <label>Đã trả (trước đó)</label>
+                    <input class="input" value="150.000.000" disabled />
+                </div>
+                <div class="field">
+                    <label>Số tiền trả thêm lần này</label>
+                    <input class="input" id="phieuchi-sotien" value="45.000.000" />
+                </div>
+                <div class="field">
+                    <label>Hình thức</label>
+                    <select class="input">
+                        <option>Tiền mặt</option>
+                        <option>Chuyển khoản</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Ghi chú</label>
+                    <textarea class="input input-textarea" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-phieuchi-save" type="button">
+                    Lưu phiếu chi
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal quên mật khẩu – bước 1 -->
+    <div class="modal" id="modal-forgot-step1">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3>Quên mật khẩu</h3>
+                <button class="modal__close" data-modal-close>&times;</button>
+            </div>
+            <div class="modal__body">
+                <p>Nhập <strong>tên đăng nhập hoặc email</strong> của bạn, hệ thống sẽ gửi mã xác nhận.</p>
+                <div class="form-group">
+                    <label for="fp-identifier">Tên đăng nhập / Email</label>
+                    <input id="fp-identifier" class="input" type="text" />
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn-outline" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-fp-send-code" type="button">Gửi mã</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal quên mật khẩu – bước 2 -->
+    <div class="modal" id="modal-forgot-step2">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3>Nhập mã & mật khẩu mới</h3>
+                <button class="modal__close" data-modal-close>&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="form-group">
+                    <label for="fp-code">Mã xác nhận</label>
+                    <input id="fp-code" class="input" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="fp-new-password">Mật khẩu mới</label>
+                    <input id="fp-new-password" class="input" type="password" />
+                </div>
+                <div class="form-group">
+                    <label for="fp-new-password2">Nhập lại mật khẩu mới</label>
+                    <input id="fp-new-password2" class="input" type="password" />
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn-outline" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-fp-reset" type="button">Đổi mật khẩu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Tạo nhanh nhà cung cấp từ phiếu nhập -->
+    <div class="modal" id="modal-quick-ncc">
+        <div class="modal__dialog modal__dialog-sm">
+            <div class="modal__header">
+                <h3 id="modal-quick-ncc-title">Thêm nhà cung cấp</h3>
+                <button class="modal__close" data-modal-close type="button">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="field">
+                    <label>Mã NCC</label>
+                    <input class="input" id="quick-ncc-ma" placeholder="VD: NCC05" />
+                </div>
+                <div class="field">
+                    <label>Tên NCC</label>
+                    <input class="input" id="quick-ncc-ten" />
+                </div>
+                <div class="field">
+                    <label>Người liên hệ</label>
+                    <input class="input" id="quick-ncc-lienhe" />
+                </div>
+                <div class="field">
+                    <label>Điện thoại</label>
+                    <input class="input" id="quick-ncc-dienthoai" />
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input class="input" id="quick-ncc-email" />
+                </div>
+                <div class="field">
+                    <label>Địa chỉ</label>
+                    <input class="input" id="quick-ncc-diachi" />
+                </div>
+                <div class="field">
+                    <label>Ghi chú</label>
+                    <textarea class="input input-textarea" id="quick-ncc-ghichu" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" data-modal-close type="button">Hủy</button>
+                <button class="btn btn-primary" id="btn-quick-ncc-save" type="button">
+                    Lưu NCC
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

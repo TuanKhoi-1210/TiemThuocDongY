@@ -1,0 +1,11 @@
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\bin\Debug\TiemThuocDongY.Data.dll
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\bin\Debug\TiemThuocDongY.Data.pdb
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\bin\Debug\TiemThuocDongY.Domain.dll
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\bin\Debug\TiemThuocDongY.Domain.pdb
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\obj\Debug\TiemThuocDongY.Data.csproj.AssemblyReference.cache
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\obj\Debug\TiemThuocDongY.Data.csproj.CoreCompileInputs.cache
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\obj\Debug\TiemThuo.6C2C8A20.Up2Date
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\obj\Debug\TiemThuocDongY.Data.dll
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\obj\Debug\TiemThuocDongY.Data.pdb
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\bin\Debug\System.Data.SqlClient.dll
+D:\CODE\repos\TiemThuocDongY\TiemThuocDongY.Data\bin\Debug\System.Data.SqlClient.xml

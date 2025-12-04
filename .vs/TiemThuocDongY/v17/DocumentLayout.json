@@ -1,0 +1,768 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CODE\\repos\\TiemThuocDongY\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.winapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\khachhangrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\khachhangrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\donthuocchitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\donthuocchitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\dm_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\dm_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\donthuocservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\donthuocservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\phieunhaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\phieunhaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\thuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\thuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\printing\\baocaotonghoppdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\printing\\baocaotonghoppdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\printing\\baocaocongnopdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\printing\\baocaocongnopdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\printing\\baocaokhopdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\printing\\baocaokhopdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\baocaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\baocaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\baocaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\baocaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\baocaodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\baocaodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\dashboardsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\dashboardsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\donthuoclistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\donthuoclistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\webmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\webmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\printing\\dashboardreportpdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\printing\\dashboardreportpdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\printing\\phieunhappdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\printing\\phieunhappdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\nhacungcaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\nhacungcaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\passwordreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\passwordreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\dm_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\dm_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\phieunhapdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\phieunhapdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\donthuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\donthuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\auth\\simpleresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\auth\\simpleresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\email\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\email\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|d:\\code\\repos\\tiemthuocdongy\\tiemthuocdongy.winapp\\printing\\donthuocpdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55E827A-C719-4629-8EE1-C9112EB60FC0}|TiemThuocDongY.WinApp\\TiemThuocDongY.WinApp.csproj|solutionrelative:tiemthuocdongy.winapp\\printing\\donthuocpdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\donthuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\donthuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\donthuocdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\donthuocdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\donthuoccreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\donthuoccreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\auth\\loginresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\auth\\loginresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\email\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\email\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\passwordresetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\passwordresetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.services\\thuocsvc\\thuocservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC4BE91-D57F-4AB9-B322-617C4C3C21FB}|TiemThuocDongY.Services\\TiemThuocDongY.Services.csproj|solutionrelative:tiemthuocdongy.services\\thuocsvc\\thuocservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9CD610-6BD1-4CD5-86AE-1A9201E370A6}|TiemThuocDongY.Data\\TiemThuocDongY.Data.csproj|solutionrelative:tiemthuocdongy.data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|D:\\CODE\\repos\\TiemThuocDongY\\tiemthuocdongy.domain\\entities\\sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67D05C8E-521F-4975-83E7-3DC89AD7A7E4}|TiemThuocDongY.Domain\\TiemThuocDongY.Domain.csproj|solutionrelative:tiemthuocdongy.domain\\entities\\sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KhachHangRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\KhachHangRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\KhachHangRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\KhachHangRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\KhachHangRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAkwKIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T06:28:09.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\wwwroot\\index.html",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\wwwroot\\index.html",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\wwwroot\\index.html",
+              "ViewState": "AgIAAOEEAAAAAAAAAAAMwBEFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-28T16:26:16.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.js",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\wwwroot\\js\\app.js",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\wwwroot\\js\\app.js",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\wwwroot\\js\\app.js",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\wwwroot\\js\\app.js",
+              "ViewState": "AgIAAP0KAAAAAAAAAADgvx4LAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-28T07:50:26.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\MainForm.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\MainForm.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\MainForm.cs",
+              "ViewState": "AgIAAJYEAAAAAAAAAAD4v7oEAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:49:01.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAIIDAAAAAAAAAAAIwKgDAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-28T16:43:37.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DonThuocChiTiet.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuocChiTiet.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\DonThuocChiTiet.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuocChiTiet.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\DonThuocChiTiet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:38:51.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DM_KhachHang.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DM_KhachHang.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\DM_KhachHang.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DM_KhachHang.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\DM_KhachHang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T06:31:13.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\MainForm.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\MainForm.cs [Design]",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:55:56.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DonThuocService.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\DonThuocService.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\DonThuocService.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\DonThuocService.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\DonThuocService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T05:30:34.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ThuocRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\ThuocRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\ThuocRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\ThuocRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\ThuocRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwD0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:56:18.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PhieuNhapRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\PhieuNhapRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\PhieuNhapRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\PhieuNhapRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\PhieuNhapRepository.cs",
+              "ViewState": "AgIAAN0AAAAAAAAAAAASwP0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T07:36:53.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Thuoc.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\Thuoc.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\Thuoc.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\Thuoc.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\Thuoc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:45:12.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\DashboardService.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\DashboardService.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\DashboardService.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\DashboardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T13:19:00.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BaoCaoTongHopPdfDocument.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\BaoCaoTongHopPdfDocument.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\Printing\\BaoCaoTongHopPdfDocument.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\BaoCaoTongHopPdfDocument.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\Printing\\BaoCaoTongHopPdfDocument.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAwwMIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:44:41.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BaoCaoCongNoPdfDocument.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\BaoCaoCongNoPdfDocument.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\Printing\\BaoCaoCongNoPdfDocument.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\BaoCaoCongNoPdfDocument.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\Printing\\BaoCaoCongNoPdfDocument.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAwwL0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:44:28.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BaoCaoKhoPdfDocument.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\BaoCaoKhoPdfDocument.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\Printing\\BaoCaoKhoPdfDocument.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\BaoCaoKhoPdfDocument.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\Printing\\BaoCaoKhoPdfDocument.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAwwLAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:44:17.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BaoCaoService.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\BaoCaoService.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\BaoCaoService.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\BaoCaoService.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\BaoCaoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:36:02.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BaoCaoRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\BaoCaoRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\BaoCaoRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\BaoCaoRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\BaoCaoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:34:16.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BaoCaoDtos.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\BaoCaoDtos.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\BaoCaoDtos.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\BaoCaoDtos.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\BaoCaoDtos.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA9wEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:33:52.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DashboardRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\DashboardRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\DashboardRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\DashboardRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\DashboardRepository.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAcwJAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T13:17:33.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DashboardSummaryDto.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DashboardSummaryDto.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\DashboardSummaryDto.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DashboardSummaryDto.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\DashboardSummaryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T13:17:12.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DonThuocListItem.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuocListItem.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\DonThuocListItem.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuocListItem.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\DonThuocListItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T07:27:24.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "WebMessage.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\WebMessage.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\WebMessage.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\WebMessage.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\WebMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:48:44.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DashboardReportPdfDocument.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\DashboardReportPdfDocument.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\Printing\\DashboardReportPdfDocument.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\DashboardReportPdfDocument.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\Printing\\DashboardReportPdfDocument.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAUwIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T13:19:34.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Program.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\Program.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Program.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:48:12.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PhieuNhapPdfDocument.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\PhieuNhapPdfDocument.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\Printing\\PhieuNhapPdfDocument.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\PhieuNhapPdfDocument.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\Printing\\PhieuNhapPdfDocument.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAwwPkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T12:15:26.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "NhaCungCapRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\NhaCungCapRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\NhaCungCapRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\NhaCungCapRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\NhaCungCapRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:04:31.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PasswordReset.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\PasswordReset.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\PasswordReset.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\PasswordReset.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\PasswordReset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:57:14.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DM_NhaCungCap.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DM_NhaCungCap.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\DM_NhaCungCap.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DM_NhaCungCap.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\DM_NhaCungCap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T07:54:10.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PhieuNhapDtos.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\PhieuNhapDtos.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\PhieuNhapDtos.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\PhieuNhapDtos.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\PhieuNhapDtos.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAswF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T07:33:01.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DonThuocRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\DonThuocRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\DonThuocRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\DonThuocRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\DonThuocRepository.cs",
+              "ViewState": "AgIAAD8CAAAAAAAAAADwv14CAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T07:27:55.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Auth\\AuthService.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\Auth\\AuthService.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Auth\\AuthService.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\Auth\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:46:47.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SimpleResult.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Auth\\SimpleResult.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\Auth\\SimpleResult.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Auth\\SimpleResult.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\Auth\\SimpleResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:07:40.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAPEUAAAAAAAAAAD4vwgVAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-12-01T16:36:25.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Email\\EmailService.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\Email\\EmailService.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Email\\EmailService.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\Email\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T05:25:25.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DonThuocPdfDocument.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\DonThuocPdfDocument.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.WinApp\\Printing\\DonThuocPdfDocument.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.WinApp\\Printing\\DonThuocPdfDocument.cs",
+              "RelativeToolTip": "TiemThuocDongY.WinApp\\Printing\\DonThuocPdfDocument.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAwwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T06:24:56.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DonThuoc.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuoc.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\DonThuoc.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuoc.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\DonThuoc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:38:28.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DonThuocDetailDto.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuocDetailDto.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\DonThuocDetailDto.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuocDetailDto.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\DonThuocDetailDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T08:32:40.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DonThuocCreateDto.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuocCreateDto.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\DonThuocCreateDto.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\DonThuocCreateDto.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\DonThuocCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:42:17.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "LoginResult.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Auth\\LoginResult.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\Auth\\LoginResult.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Auth\\LoginResult.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\Auth\\LoginResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:46:32.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Email\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\Email\\EmailSettings.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\Email\\EmailSettings.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\Email\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T05:25:06.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "PasswordResetRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\PasswordResetRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\PasswordResetRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\PasswordResetRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\PasswordResetRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:59:45.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ThuocService.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\ThuocSvc\\ThuocService.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Services\\ThuocSvc\\ThuocService.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Services\\ThuocSvc\\ThuocService.cs",
+              "RelativeToolTip": "TiemThuocDongY.Services\\ThuocSvc\\ThuocService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:47:45.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Data\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Data\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "TiemThuocDongY.Data\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAcwEYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T14:08:14.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "SysUser.cs",
+              "DocumentMoniker": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\SysUser.cs",
+              "RelativeDocumentMoniker": "TiemThuocDongY.Domain\\Entities\\SysUser.cs",
+              "ToolTip": "D:\\CODE\\repos\\TiemThuocDongY\\TiemThuocDongY.Domain\\Entities\\SysUser.cs",
+              "RelativeToolTip": "TiemThuocDongY.Domain\\Entities\\SysUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:45:12.885Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

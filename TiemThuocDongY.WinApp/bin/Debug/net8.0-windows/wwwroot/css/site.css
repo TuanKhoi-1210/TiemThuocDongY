@@ -1,0 +1,937 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f3f4f6;
+    font-size: 14px;
+}
+
+/* Ẩn app khi chưa login */
+.app-shell-hidden {
+    display: none;
+}
+
+/* ===== Login screen ===== */
+
+.login-screen {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top left, #dcfce7 0, #f9fafb 45%, #e5e7eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+}
+
+.login-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px 32px;
+    width: 360px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
+    text-align: center;
+}
+
+.login-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #22c55e33;
+    font-size: 26px;
+}
+
+.login-card h1 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.login-sub {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+.login-card .field {
+    text-align: left;
+}
+
+    .login-card .field + .field {
+        margin-top: 8px;
+    }
+
+.login-btn {
+    width: 100%;
+    margin-top: 14px;
+}
+
+.login-hint {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 8px;
+}
+
+/* ===== Layout chính ===== */
+
+.app-shell {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 260px;
+    background: #111827;
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.sidebar__brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.brand__logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: #22c55e33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.brand__title {
+    font-weight: 600;
+}
+
+.brand__subtitle {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.sidebar__nav {
+    flex: 1;
+}
+
+.nav-item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+    .nav-item:hover {
+        background: #1f2937;
+    }
+
+    .nav-item.active {
+        background: #22c55e33;
+        color: #bbf7d0;
+    }
+
+.nav-icon {
+    width: 22px;
+    margin-right: 6px;
+}
+
+.sidebar__footer {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 16px;
+}
+
+/* Main */
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.header__title h1 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.header__title p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-box {
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    font-size: 13px;
+    min-width: 220px;
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #ffffff;
+    font-size: 13px;
+}
+
+    .user-badge:hover {
+        background: #f3f4f6;
+        cursor: pointer;
+    }
+
+.user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: #22c55e;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.user-name {
+    font-size: 13px;
+}
+
+.user-menu__dropdown {
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+    min-width: 160px;
+    padding: 6px 0;
+    display: none;
+    z-index: 100;
+}
+
+.user-menu.open .user-menu__dropdown {
+    display: block;
+}
+
+.user-menu__item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+    .user-menu__item:hover {
+        background: #f3f4f6;
+    }
+
+.user-avatar-lg {
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    background: #22c55e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+/* Content */
+
+.main__content {
+    padding: 16px 20px 24px 20px;
+    overflow: auto;
+    flex: 1;
+}
+
+.page {
+    display: none;
+}
+
+    .page.active {
+        display: block;
+    }
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+    .page-header h2 {
+        font-size: 18px;
+    }
+
+.page-header__actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Inputs */
+
+.field {
+    margin-bottom: 10px;
+}
+
+    .field label {
+        display: block;
+        font-size: 12px;
+        color: #6b7280;
+        margin-bottom: 4px;
+    }
+
+.input {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 13px;
+    width: 100%;
+}
+
+.input-textarea {
+    resize: vertical;
+}
+
+.field-right {
+    text-align: right;
+}
+
+/* Grid & card */
+
+.grid {
+    display: grid;
+    gap: 12px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 12px 14px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+    margin-bottom: 12px;
+}
+
+.card--mt {
+    margin-top: 12px;
+}
+
+.card-title {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.card-value {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-sub {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* Table */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+    .table th,
+    .table td {
+        border-bottom: 1px solid #e5e7eb;
+        padding: 8px 6px;
+        text-align: left;
+    }
+
+    .table th {
+        background: #f9fafb;
+        font-weight: 600;
+    }
+
+.table-compact th,
+.table-compact td {
+    padding: 6px 4px;
+}
+
+/* Buttons */
+
+.btn {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    background: #e5e7eb;
+}
+
+.btn-primary {
+    background: #22c55e;
+    color: #ffffff;
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.btn-sm {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* Filters & table footer */
+
+.filters-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px 12px;
+    margin-bottom: 10px;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    margin-top: 6px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.table-footer__actions {
+    display: flex;
+    gap: 4px;
+}
+
+/* Badges */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    border: 1px solid transparent;
+}
+
+.badge-success {
+    background: #dcfce7;
+    border-color: #bbf7d0;
+    color: #166534;
+}
+
+.badge-warning {
+    background: #fef3c7;
+    border-color: #fde68a;
+    color: #92400e;
+}
+
+.badge-outline {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    color: #4b5563;
+}
+
+/* Account page */
+
+.card-account .field {
+    margin-bottom: 12px;
+}
+
+.account-layout {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+/* Form grid */
+
+.form-grid {
+    display: grid;
+    gap: 10px 12px;
+}
+
+.form-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+    .modal.open {
+        display: flex;
+    }
+
+.modal__dialog {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 14px 16px;
+    min-width: 520px;
+    max-width: 800px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
+}
+
+.modal__dialog-lg {
+    min-width: 720px;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .modal__header h3 {
+        font-size: 16px;
+    }
+
+.modal__close {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal__body {
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Detail view (đơn / phiếu) */
+
+.modal-prescription .modal__body,
+.modal-receipt .modal__body {
+    font-size: 13px;
+}
+
+.detail-header {
+    margin-bottom: 10px;
+}
+
+.detail-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.detail-sub {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 18px;
+    margin-bottom: 10px;
+}
+
+.detail-label {
+    font-size: 11px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.detail-value {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.detail-block {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.detail-summary {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 13px;
+}
+
+    .detail-summary div + div {
+        margin-top: 2px;
+    }
+
+.detail-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 12px;
+}
+/* ===== Account page ===== */
+
+.page-account {
+    padding-bottom: 32px;
+}
+
+.account-container {
+    max-width: 1080px;
+    margin: 0 auto 32px;
+    display: grid;
+    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+    gap: 20px;
+}
+
+.account-card {
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 20px 22px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.account-card--profile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.account-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #10b981, #0ea5e9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.account-profile-text h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.account-profile-role {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #16a34a;
+    font-weight: 500;
+}
+
+.account-profile-email {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.account-profile-note {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.account-card--detail .card-title {
+    margin-bottom: 16px;
+}
+
+.account-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 20px;
+    margin-bottom: 20px;
+}
+
+    .account-grid .form-group label {
+        font-size: 13px;
+        color: #6b7280;
+        margin-bottom: 3px;
+    }
+
+    .account-grid .form-group input[disabled] {
+        background: #f9fafb;
+        border-color: #e5e7eb;
+        color: #111827;
+    }
+
+.form-group--full {
+    grid-column: 1 / -1;
+}
+
+.account-security h4 {
+    font-size: 14px;
+    margin: 0 0 4px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.account-security p {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.account-security .btn {
+    padding-inline: 18px;
+}
+
+/* Mobile: stack 1 cột */
+@media (max-width: 960px) {
+    .account-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+.account-grid .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+    .account-grid .form-group label {
+        font-size: 13px;
+        color: #6b7280;
+        margin-bottom: 4px;
+    }
+.input:disabled,
+.input[disabled] {
+    background: #f9fafb;
+    border-color: #e5e7eb;
+    color: #111827;
+    cursor: default;
+}
+/* ===== Quản lý tài khoản (Admin) ===== */
+
+.account-card--userlist {
+    margin-top: 12px;
+}
+
+/* Ẩn khu Admin mặc định, chỉ show nếu role=Admin */
+#account-userlist-card {
+    display: none;
+}
+
+.account-userlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+.account-userlist-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.input-sm {
+    padding: 4px 8px;
+    font-size: 12px;
+    height: 28px;
+}
+
+/* Hàng user bị khóa mờ đi một chút */
+.account-user-row--inactive {
+    opacity: 0.75;
+}
+
+/* Nút khu bảo mật */
+.account-security__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* Form chi tiết – input đều hàng, dùng .input cho đẹp */
+.account-grid .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+    .account-grid .form-group label {
+        font-size: 13px;
+        color: #6b7280;
+        margin-bottom: 4px;
+    }
+
+.input {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 13px;
+    width: 100%;
+}
+
+    .input:disabled {
+        background: #f9fafb;
+        border-color: #e5e7eb;
+        color: #111827;
+        cursor: default;
+    }
+
+/* Hàng đang chọn trong danh sách */
+#account-user-table tbody tr.row-selected {
+    background: #eff6ff;
+}
+/* ===== Account security layout ===== */
+
+.account-security {
+    margin-top: 16px;
+}
+
+/* Nhóm nút Lưu / Vô hiệu hóa / Xóa */
+.account-security__buttons {
+    margin-top: 8px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Đường kẻ giữa nhóm nút quản lý và nút Đăng xuất */
+.account-security__divider {
+    margin: 16px 0 10px;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Nút đăng xuất cách nhóm nút phía trên một chút */
+#btn-logout {
+    margin-top: 4px;
+}
+.account-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.form-group--full {
+    grid-column: 1 / -1;
+}
+
+.account-security {
+    margin-top: 16px;
+}
+
+.account-security__buttons {
+    margin-top: 8px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* khoảng cách giữa Lưu / Vô hiệu / Xóa */
+}
+
+.account-security__divider {
+    margin: 16px 0 10px;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+#btn-logout {
+    margin-top: 4px; /* tách đăng xuất khỏi nhóm nút trên */
+}
+
+/* Add-user button gọn hơn */
+.account-userlist-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.account-password-row {
+    display: flex;
+    gap: 8px;
+}
+
+    .account-password-row .input {
+        flex: 1;
+    }
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 400; /* hoặc 9999 cho chắc, chỉ cần > 300 */
+}
+
+    .modal.open {
+        display: flex;
+    }
+.hidden {
+    display: none !important;
+}
